@@ -28,4 +28,13 @@ public class Music extends Audio {
     public void setType(String type) {
         this.type = type;
     }
+
+    @Override
+    public int getRating() {
+        if(this.getTotalPlays() > 2000) {
+            return 10;
+        } else {
+            return 8;
+        }
+    }
 }
